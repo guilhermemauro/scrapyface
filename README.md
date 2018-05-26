@@ -20,3 +20,11 @@ Scrapy Cluster (https://github.com/istresearch/scrapy-cluster).
 ## Começando
 
 Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local.
+
+### Instalação
+
+Fazer uma cópia para sua máquina local.
+
+```
+git clone git@github.com:guilhermemauro/scrapyface.git
+```
