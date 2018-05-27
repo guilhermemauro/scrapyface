@@ -28,3 +28,31 @@ Fazer uma cópia para sua máquina local.
 ```
 git clone git@github.com:guilhermemauro/scrapyface.git
 ```
+
+### Requerimentos
+
+- MongoDB v3.2 (Caso utilize ele para guardar as informações)
+- Instalar requeriments.txt
+
+### Configuração
+
+No arquivo settings.py:
+
+Caso não vá utilizar o MongoDB, retire de ITEM_PIPELINES (facebook_spider.pipelines.MongoDBPipeline).
+
+#### Configurar apenas em caso de usar o pipeline MongoDBPipeline
+- MONGO_SERVER = endereço do banco de dados
+- MONGO_PORT = porta para conectar ao banco de dados
+- MONGO_DATABASE = nome da base dados
+
+### Utilização
+
+Informar os parâmetros na linha de comando:
+
+```
+scrapy crawl friend_crawler -a email="email para login" -a password="senha para login"
+ -a uid="id do usuario alvo"
+```
+
+Caso você tenha controle sobre endereço do seu proxy, você pode usar o parâmetro
+opcional proxy="ip:porta".
